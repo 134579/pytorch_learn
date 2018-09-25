@@ -75,3 +75,13 @@ print((x ** 2).requires_grad)
 
 with torch.no_grad():
     print((x ** 2).requires_grad)
+
+## reshape backward
+# x = torch.randn([100000, 1], requires_grad=True, device='cuda')
+import torch
+x = torch.randn([10000000, 1], requires_grad=True, device='cuda')
+y = x.view([1, 10000000])
+z = y @ y.t()
+w = y @ torch.one
+z.backward()
+print(torch.all(x.grad == 2 * x))
