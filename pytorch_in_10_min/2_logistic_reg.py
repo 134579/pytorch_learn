@@ -49,7 +49,7 @@ if __name__ == '__main__':
     criterion = nn.CrossEntropyLoss()
     optimizer = optim.SGD(model.parameters(), lr=0.001)
     
-    num_epoches = 2
+    num_epoches = 100
     use_gpu = True
     if use_gpu:
         model.cuda()

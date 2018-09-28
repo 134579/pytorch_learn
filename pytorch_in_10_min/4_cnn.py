@@ -77,8 +77,8 @@ if __name__ == '__main__':
     test_loader = DataLoader(test_dataset, batch_size=1000, shuffle=False)
     ##############################################
     
-    num_epoches = 100
-    use_gpu = True
+    num_epoches = 10
+    use_gpu = False
 
     model = CNN([1, 28, 28], 10)
     if use_gpu:
