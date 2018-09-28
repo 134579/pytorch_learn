@@ -80,10 +80,9 @@ if __name__ == '__main__':
     num_epoches = 100
     use_gpu = True
     
-    model = CNN([1, 28, 28], 10)  # 图片大小是28x28
+    model = CNN([1, 28, 28], 10)
     if use_gpu:
         model = model.cuda()
-    # 定义loss和optimizer
     criterion = nn.CrossEntropyLoss()
     optimizer = optim.SGD(model.parameters(), lr=0.01)
     
