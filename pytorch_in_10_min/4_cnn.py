@@ -79,7 +79,7 @@ if __name__ == '__main__':
     
     num_epoches = 100
     use_gpu = True
-    
+
     model = CNN([1, 28, 28], 10)
     if use_gpu:
         model = model.cuda()
