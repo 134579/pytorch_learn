@@ -78,7 +78,7 @@ if __name__ == '__main__':
     ##############################################
     
     num_epoches = 10
-    use_gpu = False
+    use_gpu = True
 
     model = CNN([1, 28, 28], 10)
     if use_gpu:
